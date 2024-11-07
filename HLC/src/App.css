@@ -12,3 +12,10 @@
 .timer {
   background-color: rgb(142, 142, 177);
 }
+
+.btn {
+  background-color: rgb(195, 195, 24);
+  border-radius: none;
+  padding: 10px;
+  border-radius: 10px;
+}

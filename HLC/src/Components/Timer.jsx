@@ -1,4 +1,5 @@
 import { memo, useEffect, useState } from "react";
+import Button from "./Button";
 
 const Timer = memo(function Timer() {
   let maxTime = 1;
@@ -18,6 +19,10 @@ const Timer = memo(function Timer() {
     return () => clearInterval(timer);
   }, []);
 
+  function handleButton() {
+    console.log("print");
+  }
+
   //render checker log
   console.log("<Timer/> comp rendering ");
   return (
@@ -26,6 +31,7 @@ const Timer = memo(function Timer() {
       <h1>{time}</h1>
       <progress value={time} max={maxTime}></progress>
       {/* <button onClick={() => timer()}>Call</button> */}
+      <Button onClick={handleButton}>Custom</Button>
     </div>
   );
 });

@@ -1,6 +1,7 @@
 //Use Effect with a state dependency: Example
 
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 export default function Effect() {
   const [value, setValue] = useState(0);
@@ -33,6 +34,7 @@ export default function Effect() {
       <button onClick={handleDataClick}>Add Data</button>
       <h4>Add Value: {value}</h4>
       <h4>Add Data: {data}</h4>
+      <Button>YouTube</Button>
     </div>
   );
 }
