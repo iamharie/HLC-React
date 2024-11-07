@@ -14,12 +14,17 @@ export default function Effect() {
     setDate((prevState) => prevState + 1);
   }
 
-  useEffect(function () {
-    console.log("Add Value changed", value);
-  }, []);
+  useEffect(
+    function () {
+      console.log("Add Value changed", value);
+    },
+    [value]
+  );
 
+  //render checker log
+  console.log("<Effect/> comp rendering ");
   return (
-    <div>
+    <div className="effect">
       <p>
         This particular react component is dedicated to understand the purspose
         of useEffect() Hook in Recat!
