@@ -1,18 +1,25 @@
 .app {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   text-align: center;
 }
 
 .effect {
   background-color: rgb(224, 213, 199);
+  align-content: center;
 }
 
 .timer {
   background-color: rgb(142, 142, 177);
+  align-content: center;
 }
 
+.input {
+  background-color: rgb(158, 147, 169);
+  align-content: center;
+}
+/* resuable component */
 .btn {
   background-color: rgb(195, 195, 24);
   border-radius: none;

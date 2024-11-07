@@ -31,7 +31,7 @@ const Timer = memo(function Timer() {
       <h1>{time}</h1>
       <progress value={time} max={maxTime}></progress>
       {/* <button onClick={() => timer()}>Call</button> */}
-      <Button onClick={handleButton}>Custom</Button>
+      <Button onClick={handleButton}>Start/ Stop</Button>
     </div>
   );
 });

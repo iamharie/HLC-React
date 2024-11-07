@@ -10,10 +10,12 @@ export default function Input({ result, keyStroke }) {
 
   //render checker log
   console.log("<Input/> comp rendering ");
+  //
   return (
-    <div>
+    <div className="input">
+      <h4>Form Component</h4>
       <input type="text" value={result} onChange={keyStroke} />
-      <Button onClick={() => printInput(result)}>Custom</Button>
+      <Button onClick={() => printInput(result)}>Print</Button>
       <p>{data}</p>
     </div>
   );
