@@ -1,19 +1,19 @@
 //Use Effect with a state dependency: Example
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "./Button";
 
 export default function Effect() {
   const [value, setValue] = useState(0);
   const [data, setDate] = useState(0);
 
-  function handleAddClick() {
+  const handleAddClick = useCallback(function handleAddClick() {
     setValue((prevState) => prevState + 1);
-  }
+  }, []);
 
-  function handleDataClick() {
+  const handleDataClick = useCallback(function handleDataClick() {
     setDate((prevState) => prevState + 1);
-  }
+  }, []);
 
   useEffect(
     function () {
@@ -30,11 +30,15 @@ export default function Effect() {
         This particular react component is dedicated to understand the purspose
         of useEffect() Hook in Recat!
       </p>
-      <button onClick={handleAddClick}>Add Value</button>
-      <button onClick={handleDataClick}>Add Data</button>
+      <Button onClick={handleAddClick}>Add Value</Button>
+
+      <Button onClick={handleDataClick}>Add Data</Button>
+
       <h4>Add Value: {value}</h4>
+
       <h4>Add Data: {data}</h4>
-      <Button>YouTube</Button>
+
+      {/* <Button>YouTube</Button> */}
     </div>
   );
 }
