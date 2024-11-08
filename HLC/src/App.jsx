@@ -6,6 +6,7 @@ import "./App.css";
 import Effect from "./Components/Effect.jsx";
 import Timer from "./Components/Timer.jsx";
 import Input from "./Components/Input";
+import APICall from "./Components/APICall";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -17,8 +18,9 @@ export default function App() {
   return (
     <div className="app">
       <Effect />
-      <Timer />
+      {/* <Timer /> */}
       <Input result={input} keyStroke={handleInput} />
+      <APICall />
     </div>
   );
 }

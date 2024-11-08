@@ -19,6 +19,12 @@
   background-color: rgb(158, 147, 169);
   align-content: center;
 }
+
+.input img {
+  max-width: 100%; /* Constrain width to fit box */
+  max-height: 100%; /* Constrain height to fit box */
+  object-fit: contain;
+}
 /* resuable component */
 .btn {
   background-color: rgb(195, 195, 24);
