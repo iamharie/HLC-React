@@ -25,6 +25,14 @@
   max-height: 100%; /* Constrain height to fit box */
   object-fit: contain;
 }
+
+.error {
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #f4c7c7;
+  color: #3e0505;
+}
 /* resuable component */
 .btn {
   background-color: rgb(195, 195, 24);
