@@ -6,7 +6,8 @@ import Timer from "./Components/Timer.jsx";
 import Input from "./Components/Input";
 import APICall from "./Components/APICall";
 import WeatherCard from "./Components/CheckTailwindCss";
-import Form from "./Components/Form.jsx";
+import StateLogin from "./Components/StateLogin.jsx";
+import RefLogin from "./Components/RefLogin";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -16,13 +17,16 @@ export default function App() {
   }
   console.log("-App component");
   return (
-    <div className="app">
-      {/* <Effect /> */}
-      {/* <Timer /> */}
-      {/* <Input result={input} keyStroke={handleInput} /> */}
-      {/* <APICall /> */}
-      {/* <WeatherCard /> */}
-      <Form />
-    </div>
+    <>
+      <div className="app">
+        {/* <Effect />
+        <Timer />
+        <Input result={input} keyStroke={handleInput} />
+        <APICall />
+        <WeatherCard /> */}
+      </div>
+      <StateLogin />
+      <RefLogin />
+    </>
   );
 }
