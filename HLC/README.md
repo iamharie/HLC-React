@@ -30,3 +30,13 @@ Currently, two official plugins are available:
 - data state
 - loading state
 - error state
+
+### Tailwind CSS incorporated
+
+- isFetching "Spinner Animation"
+
+### Custom Hook
+- Always start with "use" example useHari();
+- We can obsoletely use hooks inside the custom hooks.
+- Important: return the built-in hooks used inside a custom hook to have them destructured and used in other components.
+- Optional: Custom-Hook can be stored in a seperate folder under the src of the project structure to have a clean project tree.
