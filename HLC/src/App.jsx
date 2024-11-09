@@ -6,6 +6,7 @@ import Timer from "./Components/Timer.jsx";
 import Input from "./Components/Input";
 import APICall from "./Components/APICall";
 import WeatherCard from "./Components/CheckTailwindCss";
+import Form from "./Components/Form.jsx";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -19,8 +20,9 @@ export default function App() {
       {/* <Effect /> */}
       {/* <Timer /> */}
       {/* <Input result={input} keyStroke={handleInput} /> */}
-      <APICall />
+      {/* <APICall /> */}
       {/* <WeatherCard /> */}
+      <Form />
     </div>
   );
 }
