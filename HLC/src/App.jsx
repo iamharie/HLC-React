@@ -1,12 +1,11 @@
 import { useState } from "react";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
 //Components import
 import Effect from "./Components/Effect.jsx";
 import Timer from "./Components/Timer.jsx";
 import Input from "./Components/Input";
 import APICall from "./Components/APICall";
+import WeatherCard from "./Components/CheckTailwindCss";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -14,13 +13,14 @@ export default function App() {
   function handleInput(event) {
     setInput(event.target.value);
   }
-  console.log("App component");
+  console.log("-App component");
   return (
     <div className="app">
-      <Effect />
+      {/* <Effect /> */}
       {/* <Timer /> */}
-      <Input result={input} keyStroke={handleInput} />
+      {/* <Input result={input} keyStroke={handleInput} /> */}
       <APICall />
+      {/* <WeatherCard /> */}
     </div>
   );
 }

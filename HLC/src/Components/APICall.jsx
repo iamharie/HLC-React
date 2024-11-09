@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Button from "./Button";
 import ErrorPage from "./ErrorPage.jsx";
-import useFetch from "../hooks/useFetch";
+import useFetch from "../custom-hooks/useFetch";
 
 export default function APICall() {
   //   const [data, setData] = useState([]);
@@ -48,9 +48,12 @@ export default function APICall() {
     []
   );
 
-  console.log(data.message);
+  console.log(data);
 
-  if (isFetching) return <h3>🐶 Image Loading...</h3>;
+  if (isFetching)
+    return (
+      <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+    );
 
   if (error) {
     return <ErrorPage title="error occured" message={error} />;
