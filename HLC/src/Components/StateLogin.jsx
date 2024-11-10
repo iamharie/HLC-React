@@ -24,6 +24,10 @@ export default function StateLogin() {
   });
 
   const emailIsInvalid = didEdit.email && !input.email.includes("@");
+  const passwordIsValid =
+    didEdit.password &&
+    input.password.length < 8 &&
+    !input.password.includes("@");
 
   function handleInput(identifier, event) {
     setInput((prevValue) => ({
@@ -54,7 +58,7 @@ export default function StateLogin() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login Form</h2>
+      <h2>State Login Form</h2>
 
       <div className="control-row">
         <div className="control no-margin">
@@ -78,9 +82,13 @@ export default function StateLogin() {
             id="password"
             type="password"
             name="password"
+            onBlur={() => handleInputBlur("password")}
             onChange={(event) => handleInput("password", event)}
             value={input.password}
           />
+        </div>
+        <div className="control-error">
+          {passwordIsValid && <p>Invalid Password</p>}
         </div>
       </div>
       <p className="form-actions">

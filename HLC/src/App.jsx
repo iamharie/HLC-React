@@ -26,9 +26,9 @@ export default function App() {
         <APICall />
         <WeatherCard />*/}
       </div>
-      {/* <StateLogin /> */}
-      <RefLogin />
-      {/* <Signup />  */}
+      <StateLogin />
+      {/* <RefLogin /> */}
+      {/* <Signup /> */}
     </>
   );
 }
