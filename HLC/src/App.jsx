@@ -8,6 +8,7 @@ import APICall from "./Components/APICall";
 import WeatherCard from "./Components/CheckTailwindCss";
 import StateLogin from "./Components/StateLogin.jsx";
 import RefLogin from "./Components/RefLogin";
+import Signup from "./Components/Signup.jsx";
 
 export default function App() {
   const [input, setInput] = useState("");
@@ -23,10 +24,11 @@ export default function App() {
         <Timer />
         <Input result={input} keyStroke={handleInput} />
         <APICall />
-        <WeatherCard /> */}
+        <WeatherCard />*/}
       </div>
-      <StateLogin />
+      {/* <StateLogin /> */}
       <RefLogin />
+      {/* <Signup />  */}
     </>
   );
 }

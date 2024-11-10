@@ -18,15 +18,32 @@ export default function StateLogin() {
     password: "",
   });
 
+  const [didEdit, setDidEdit] = useState({
+    email: false,
+    password: false,
+  });
+
+  const emailIsInvalid = didEdit.email && !input.email.includes("@");
+
   function handleInput(identifier, event) {
-    setInput((prevValue) => {
+    setInput((prevValue) => ({
+      ...prevValue,
+      [identifier]: event.target.value,
+    }));
+    setDidEdit((prevState) => ({
+      ...prevState,
+      [identifier]: false,
+    }));
+  }
+
+  function handleInputBlur(identifier) {
+    setDidEdit((prevEdit) => {
       return {
-        ...prevValue,
-        [identifier]: event.target.value,
+        ...prevEdit,
+        [identifier]: true,
       };
     });
   }
-
   //Form Submit
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -46,9 +63,13 @@ export default function StateLogin() {
             id="email"
             type="email"
             name="email"
+            onBlur={() => handleInputBlur("email")}
             onChange={(event) => handleInput("email", event)}
             value={input.email}
           />
+        </div>
+        <div className="control-error">
+          {emailIsInvalid && <p>Email is invalid</p>}
         </div>
 
         <div className="control no-margin">
