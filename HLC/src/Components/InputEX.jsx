@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 
-export default function Input({ result, keyStroke }) {
+export default function InputEX({ result, keyStroke }) {
   const [data, setData] = useState(null);
 
   function printInput(data) {
