@@ -40,3 +40,21 @@ Currently, two official plugins are available:
 - We can obsoletely use hooks inside the custom hooks.
 - Important: return the built-in hooks used inside a custom hook to have them destructured and used in other components.
 - Optional: Custom-Hook can be stored in a seperate folder under the src of the project structure to have a clean project tree.
+
+### Form
+#### Handling Input:
+-  useState(): on evey key stroke
+-  useRef(): connect the hook to the HTML element's attribute; DOM directly manipulated while resetting the form
+-  DataForm: in-built browser method to handle the form, const fd = new FormData(e.target);
+
+#### Form Validation
+- Every keystroke
+- onBlur: Validated on focus
+- In-built validation attributes
+- In-built validation attributes + External validation
+
+### Resuable Input Component
+- Receive the required attributes via props and re-use the Input component inside a form to reduce dupilicate JSX.
+
+### Custom Hook: Form validation
+- TBD: Not a priority, as Formik || React Forms in most of the cases.
